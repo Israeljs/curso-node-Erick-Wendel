@@ -2,7 +2,7 @@ const service = require('./service')
 
 async function main() {
     try {
-        const result = await service.obterPessoas('a')
+        const result = await service.obterPessoas('a')//pegar todo mundo que começe ou tenha a palavra 'a' no meio do texto
         const names = []
         console.time('for')
         for (let i = 0; i <= result.results.length - 1; i++) {

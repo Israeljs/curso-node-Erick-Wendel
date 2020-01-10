@@ -1,6 +1,4 @@
-const {
-    obterPessoas
-} = require('./service')
+const { obterPessoas } = require('./service')// destruction dentro de service me traga somente obterpessoas
 
 /*
 
@@ -27,9 +25,7 @@ Array.prototype.meuFilter = function (callback) {
 
 async function main() {
     try {
-        const {
-            results
-        } = await obterPessoas(`a`)
+        const { results } = await obterPessoas(`a`) //de dentro de obterpessoas me traga somente o result
 
         // const familiaLars = results.filter(function (item) {
         //     // por padrão precisa retornar um booleano
@@ -43,7 +39,7 @@ async function main() {
         // })
         const familiaLars = results.meuFilter((item, index, lista) => {
             console.log(`index: ${index}`, lista.length)
-            return item.name.toLowerCase().indexOf('lars') !== -1
+            return item.name.toLowerCase().indexOf('lars') !== -1// === -1 vai trazer todo mundo que não for lars
         })
 
         const names = familiaLars.map((pessoa) => pessoa.name)

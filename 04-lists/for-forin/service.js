@@ -8,5 +8,5 @@ async function obterPessoas(nome) {
 }
 
 module.exports = {
-    obterPessoas
+    obterPessoas//obterPessoas: obterPessoas
 }

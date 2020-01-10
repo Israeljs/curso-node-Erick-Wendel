@@ -12,7 +12,7 @@ Array.prototype.meuMap = function (callback) {
 
 async function main() {
     try {
-        const results = await service.obterPessoas(`a`)
+        const results = await service.obterPessoas(`a`)//pegar todo mundo que começe ou tenha a palavra 'a' no meio do texto
         // const names = []
         // results.results.forEach(function (item) {
         //     names.push(item.name)
