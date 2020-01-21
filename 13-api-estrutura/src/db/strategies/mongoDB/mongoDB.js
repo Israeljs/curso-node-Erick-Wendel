@@ -24,27 +24,10 @@ class MongoDB extends ICrud {
     
     return STATUS[this._connection.readyState]
   }
-  // defineModel() {
-  //   const heroiSchema = new Mongoose.Schema({                                                                                                               
-  //     nome: {
-  //       type: String,
-  //       required: true
-  //     },
-  //     poder: {
-  //       type: String,
-  //       required: true
-  //     },
-  //     insertedAt: {
-  //       type: Date,
-  //       default: new Date()
-  //     }
-  //   })
-  //   this._herois = Mongoose.model('TB_HEROIS', heroiSchema)
-  // }
-  static connect() { //não precisa dar new
-    Mongoose.connect('mongodb://localhost:27017/herois', {
+    static connect() { //não precisa dar new
+      Mongoose.connect('mongodb://localhost/herois', {
       useNewUrlParser: true
-    }, (error) => {
+     }, (error) => {
       if (!error) return;
       console.error('error to connect on mongodb', error)
     })

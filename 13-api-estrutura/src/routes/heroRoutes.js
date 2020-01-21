@@ -9,7 +9,7 @@ class HeroRoutes extends BaseRoute {
         return {
             path: '/herois',
             method: 'GET',
-            handler: (request, headers) => {
+            handler: (request, head) => {
                 return this.db.read() 
             }
         }

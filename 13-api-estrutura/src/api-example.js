@@ -1,12 +1,11 @@
-const Hapi = require('@hapi/hapi')
+const Hapi = require('hapi')
 const Context = require('./db/strategies/base/contextStrategy')
 const MongoDB = require('./db/strategies/mongoDB/mongoDB')
 const HeroiSchema = require('./db/strategies/mongoDB/schemas/heroiSchema')
 //const mongoDb = new Context(new MongoDB())
 
 const app = new Hapi.Server({
-    port: 5000,
-    host: 'localhost'
+    port: 5000
 })
 
 async function main() {
