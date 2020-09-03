@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^19.0.5",
+    "@hapi/hapi": "^19.1.1",
     "mariadb": "^2.1.5",
     "mongoose": "^5.8.7",
     "mysql2": "^2.1.0",
